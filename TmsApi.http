@@ -2,5 +2,5 @@
 
 GET http://localhost:5244/api/assessments/results
 Accept: application/json
-
+X-Training-User: dani
 ###
