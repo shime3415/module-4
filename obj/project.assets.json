@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Samuel Abayneh\\.nuget\\packages\\": {}
+    "C:\\Users\\CSUG\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Samuel Abayneh\\Desktop\\module 4\\TmsApi\\TmsApi.csproj",
+      "projectUniqueName": "C:\\Users\\CSUG\\Desktop\\TmsAp\\module-4\\TmsApi.csproj",
       "projectName": "TmsApi",
-      "projectPath": "C:\\Users\\Samuel Abayneh\\Desktop\\module 4\\TmsApi\\TmsApi.csproj",
-      "packagesPath": "C:\\Users\\Samuel Abayneh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Samuel Abayneh\\Desktop\\module 4\\TmsApi\\obj\\",
+      "projectPath": "C:\\Users\\CSUG\\Desktop\\TmsAp\\module-4\\TmsApi.csproj",
+      "packagesPath": "C:\\Users\\CSUG\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CSUG\\Desktop\\TmsAp\\module-4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Samuel Abayneh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\CSUG\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"

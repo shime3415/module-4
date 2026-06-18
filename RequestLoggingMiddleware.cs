@@ -1,3 +1,4 @@
+
 using System.Diagnostics;
 
 public class RequestLoggingMiddleware

@@ -2,9 +2,14 @@ using System.Security.Claims;
 using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Options;
+using TmsApi;
 
 var builder = WebApplication.CreateBuilder(args);
-
+// Inside Program.cs
+builder.Services.AddOptions<PaymentOptions>()
+    .BindConfiguration("Payments")
+    .ValidateDataAnnotations() // Checks [Required] and [Range]
+    .ValidateOnStart();        // Forces the check AT STARTUP, not later
 // Services
 builder.Services.AddAuthentication("Training")
     .AddScheme<AuthenticationSchemeOptions, TrainingAuthHandler>(
@@ -65,5 +70,6 @@ public class TrainingAuthHandler : AuthenticationHandler<AuthenticationSchemeOpt
         var ticket = new AuthenticationTicket(principal, Scheme.Name);
 
         return Task.FromResult(AuthenticateResult.Success(ticket));
-    }
+       
+}
 }
