@@ -1,6 +1,6 @@
 @TmsApi_HostAddress = http://localhost:5244
 
-GET http://localhost:5244/api/assessments/results
-Accept: application/json
-X-Training-User: dani
+POST http://localhost:5244/api/enrollments \
+"Content-Type: application/json" 
+'{"studentId":"S-001","courseCode":"CS-101"}'
 ###
