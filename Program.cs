@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Module4.Authentication;
+using Microsoft.EntityFrameworkCore;
+using TmsApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,10 +14,13 @@ builder.Services.AddAuthentication("Training")
     .AddScheme<AuthenticationSchemeOptions, TrainingAuthHandler>(
         "Training",
         options => { });
+        // Register TmsDbContext scoped for incoming HTTP requests
+builder.Services.AddDbContext<TmsDbContext>(options =>
+options.UseNpgsql(builder.Configuration.GetConnectionString("TmsDatabase")));
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddControllers();  // ✅ ADD THIS LINE
+builder.Services.AddControllers();  //  ADD THIS LINE
 builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
 
 var app = builder.Build();
